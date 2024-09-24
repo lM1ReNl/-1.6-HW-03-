@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Page{% endblock %}
+
+{% block content %}
+  {% if request.user.is_authenticated %}
+    <h1>Admin Page</h1>
+    <p>{{ flatpage.content }}</p>
+  {% else %}
+    <h1>Please login</h1>
+  {% endif %}
+{% endblock %}
